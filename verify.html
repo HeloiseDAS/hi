@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>網址密碼認證</title>
+  <body style="background-color: #B0CBC6; color: #026AA3;"></body>
+    <script>
+      localStorage.setItem("password", "boca");
+      
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password == localStorage.getItem("password")) {
+    window.location.href = "https://heloiseboca.notion.site/BIBO-4903f354575346628bbcd2a34e8d7b95";
+        } else {
+          alert("密碼錯誤，請重新輸入。");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>密碼認證</h1>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">密碼驗證</button>
+  </body>
+</html>
